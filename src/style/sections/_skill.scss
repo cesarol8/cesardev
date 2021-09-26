@@ -1,0 +1,205 @@
+#skill {
+  /*background-color: $primary-color;
+  background-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );*/
+  //color: $white-color;
+  color:  #343a40;
+  height: 100%;
+  border-top: 0px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  padding-bottom: 10%;
+  $accent-color: #33c4b6;
+
+  @include respond(tab-land) {
+    height: 100%;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+
+  .skill-wrapper {
+    @include respond(phone) {
+      padding-bottom: 5rem;
+    }
+
+    .skill-text {
+    
+      //padding-bottom: 5rem;
+      font-size: 90px;
+      color:#C0C0C0;
+    }
+    .package {
+    box-sizing: border-box;
+    width: 221px;
+    height: 380px;
+    border: 3px solid #e8e8e8;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 24px;
+    text-align: center;
+    float: left;
+    transition: margin-top .5s linear;
+    position: relative;
+    margin-right: 11px;
+  
+  &:hover {
+    margin-top: -30px;
+    transition: margin-top .3s linear;
+}
+}
+.name {
+    color: #565656;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-top: -5px;
+}
+.price {
+    margin-top: 7px;
+    font-weight: bold;
+  
+  &::after {
+    content: " / month per user";
+    font-weight: normal;
+}
+}
+hr {
+    background-color: #dedede;
+    border: none;
+    height: 1px;
+}
+.trial {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 2px 21px 2px 21px;
+    color: $accent-color;
+    border: 1px solid #e4e4e4;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    bottom: -20px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 29px;
+}
+li {
+    margin-bottom: 15px;
+  &:before {
+    @extend .checkIcon;
+    font-size: 1.3rem;
+    color: $accent-color;
+    margin-right: 3px;
+}
+}
+.checkIcon {
+    font-family: "FontAwesome";
+    content: "\f00c";
+}
+.brilliant {
+    border-color: $accent-color;
+  &::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 64px 64px 0 0;
+    border-color: #3bc6b8 transparent transparent transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+}
+&::after {
+    @extend .checkIcon;
+    color: white;
+    position: absolute;
+    left: 9px;
+    top: 6px;
+    text-shadow: 0 0 2px #37c5b6;
+    font-size: 1.4rem;
+}
+}
+
+    &__image {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+
+      @include respond(tab-port) {
+        padding-bottom: 6.4rem;
+      }
+      @include respond(tab-land) {
+        height: 100%;
+      }
+    }
+
+    &__info {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      flex-direction: column;
+
+      @include respond(phone) {
+        align-items: center;
+      }
+
+      &-text {
+        text-align: left;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+        @include respond(phone) {
+          font-size: 1.6rem;
+          text-align: center;
+        }
+
+        &--important {
+          background: darken($secondary-color, 1%);
+          display: inline-block;
+          font-style: italic;
+          padding: 0 0.3rem;
+          margin: 0.3rem 0;
+          line-height: 1.6;
+
+          @include respond(phone) {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+}
+.progress {  
+  
+  width: 80%;
+  max-width: 100px;
+  border: 1px solid #05e35e;
+  height: 10px;
+}
+
+.progress .progress__bar {
+  height: 100%;
+  width: 0%;
+  background-color: #05e35e;
+  //animation: fill-bar 3s none;
+  //animation-fill-mode: forwards;
+  
+}
+
+@keyframes fill-bar {
+  from {width: 0%;}
+  to {width: var(--start);}
+  
+}

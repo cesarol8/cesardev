@@ -25,12 +25,14 @@ const About = () => {
   return (
     <section id="about">
       <Container>
-        <Title title="About Me" />
+        
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
-            <Fade bottom duration={1000} delay={600} distance="30px">
+            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={img} />
+                
+                <span className="about-text">ABOUT ME</span>
+
               </div>
             </Fade>
           </Col>
@@ -53,7 +55,7 @@ const About = () => {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="cta-btn cta-btn--resume"
+                      className="cta-btn cta-btn--hero"
                       href={resume}
                     >
                       Resume

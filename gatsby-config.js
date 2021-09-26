@@ -31,5 +31,7 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
-  ],
+  ], 
+    pathPrefix: "/cesardev",
+  
 };
